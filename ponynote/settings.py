@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webpack_loader',
     'notes.apps.NotesConfig',
+    'knox',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',),
+}
 
 WEBPACK_LOADER = {
     'DEFAULT': {
