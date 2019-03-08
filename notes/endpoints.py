@@ -4,7 +4,7 @@ from rest_framework import routers
 from .api import NoteViewSet, RegistrationAPI, LoginAPI, UserAPI
 
 router = routers.DefaultRouter()
-router.register('notes', NoteViewSet)
+router.register('notes', NoteViewSet, 'notes')
 
 urlpatterns = [
     url("^", include(router.urls)),
